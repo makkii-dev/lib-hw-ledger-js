@@ -7,17 +7,15 @@
   "author": "Chen Cheng",
   "license": "MIT",
   "dependencies": {
-    "@ledgerhq/hw-transport": "^4.68.2"
-  },
-  "scripts": {
-    "flow": "flow",
-    "build": "bash scripts/build.sh"
-  },
-  "devDependencies": {
+    "@ledgerhq/hw-transport": "^4.68.2",
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@babel/preset-flow": "^7.0.0",
     "flow-bin": "^0.104.0",
     "flow-copy-source": "^2.0.7"
+  },
+  "scripts": {
+    "flow": "flow",
+    "build": "bash scripts/build.sh"
   }
 }
