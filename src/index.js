@@ -1,4 +1,4 @@
-import {AionApp} from './aion/aionApp';
+import AionApp from './aion/aionApp';
 
 
 export {
