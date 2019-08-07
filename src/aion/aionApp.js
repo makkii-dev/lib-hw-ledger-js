@@ -56,15 +56,10 @@ export default class AionApp{
     async getAccount(derivationIndex: number){
         try {
             let path = generateBip44Path(derivationIndex);
-            console.log('path=>', path);
             let buffer = genGetPublicKeyAPDUCommand(path);
-            console.log('buffer=>', buffer);
             const response = await this.transport.send(AION_APP_PREFIX, INS_GET_PUBLIC_KEY, P1, P2, buffer);
-            console.log('response=>', response);
             const pubKey = Buffer.from(response.slice(0, 32)).toString('hex');
-            console.log('pubKey=>', pubKey);
             const address = '0x'+ Buffer.from(response.slice(32)).toString('hex');
-            console.log('address=>', address);
             return {pubKey, address}
         }catch (e) {
             console.log(`get Account error => ${e}`);
