@@ -55,7 +55,7 @@ export function AionApp(transport: Transport<*>) {
         }
     }
 
-    async function signPayload(derivationIndex: number, payload: []) {
+    async function signPayload(derivationIndex: number, payload: Buffer) {
         try {
             let path = generateBip44Path(derivationIndex);
             let buffer = genSignPayloadAPDUCommand(path, payload);

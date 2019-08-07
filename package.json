@@ -2,7 +2,7 @@
   "name": "lib-hw-ledger-js",
   "version": "0.0.1",
   "description": "js lib for Ledger hardware wallet application api ",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "repository": "https://github.com/chaion/lib-hw-ledger-js.git",
   "author": "Chen Cheng",
   "license": "MIT",
@@ -10,9 +10,14 @@
     "@ledgerhq/hw-transport": "^4.68.2"
   },
   "scripts": {
-    "flow": "flow"
+    "flow": "flow",
+    "build": "bash scripts/build.sh"
   },
   "devDependencies": {
-    "flow-bin": "^0.104.0"
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-flow": "^7.0.0",
+    "flow-bin": "^0.104.0",
+    "flow-copy-source": "^2.0.7"
   }
 }
