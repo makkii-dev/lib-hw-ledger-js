@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/index.js"],"names":["AionApp"],"mappings":"AAAA,OAAOA,OAAP,MAAoB,gBAApB;AAGA,SACIA,OADJ","sourcesContent":["import AionApp from './aion/aionApp';\n\n\nexport {\n    AionApp\n}"],"file":"index.js"}
