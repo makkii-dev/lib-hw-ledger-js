@@ -45,7 +45,7 @@ export default class AionApp{
             this,
             [
                 'getAccount',
-                'signPayload',
+                'sign',
             ],
             scrambleKey
         );
@@ -67,7 +67,7 @@ export default class AionApp{
         }
     }
 
-    async signPayload(derivationIndex: number, payload: Buffer) {
+    async sign(derivationIndex: number, payload: Buffer) {
         try {
             let path = generateBip44Path(derivationIndex);
             let buffer = genSignPayloadAPDUCommand(path, payload);
