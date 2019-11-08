@@ -59,7 +59,7 @@ export default class AionApp{
             let buffer = genGetPublicKeyAPDUCommand(path);
             const response = await this.transport.send(AION_APP_PREFIX, INS_GET_PUBLIC_KEY, P1, P2, buffer);
             const pubKey = Buffer.from(response.slice(0, 32)).toString('hex');
-            const address = '0x'+ Buffer.from(response.slice(32)).toString('hex');
+            const address = '0x'+ Buffer.from(response.slice(32,64)).toString('hex');
             return {pubKey, address}
         }catch (e) {
             console.log(`get Account error => ${e}`);
@@ -72,7 +72,7 @@ export default class AionApp{
             let path = generateBip44Path(derivationIndex);
             let buffer = genSignPayloadAPDUCommand(path, payload);
             const response = await this.transport.send(AION_APP_PREFIX, INS_SIGN, P1, P2, buffer);
-            return Buffer.from(response).toString('hex')
+            return Buffer.from(response.slice(0, 64)).toString('hex')
         }catch (e) {
             console.log(`get Account error => ${e}`);
             throw e;
