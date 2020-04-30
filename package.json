@@ -1,8 +1,11 @@
 {
-  "name": "lib-hw-ledger-js",
-  "version": "0.0.1",
-  "description": "js lib for Ledger hardware wallet application api ",
+  "name": "@makkii/hw-app-aion",
+  "version": "0.1.0",
+  "description": "coin aion js lib for Ledger hardware wallet application api ",
   "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
   "repository": "https://github.com/chaion/lib-hw-ledger-js.git",
   "author": "Chen Cheng",
   "license": "MIT",
